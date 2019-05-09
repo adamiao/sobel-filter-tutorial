@@ -18,7 +18,7 @@ import numpy as np
 # #------------------------------------------------------------------------------
 
 # Here we import the image file as a tensor of shape (nx, ny, nz)
-photo_file = 'Images/valve.jpg'
+photo_file = 'Images/original_image.PNG'
 input_image = imread(photo_file)
 [nx, ny, nz] = np.shape(input_image)  # nx: height, ny: width, nz: colors (RGB)
 
