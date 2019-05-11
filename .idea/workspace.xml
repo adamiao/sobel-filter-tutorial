@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="34b1cf68-5726-424f-859a-43c676f16d24" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/sobel_main.py" beforeDir="false" afterPath="$PROJECT_DIR$/sobel_main.py" afterDir="false" />
-    </list>
+    <list default="true" id="34b1cf68-5726-424f-859a-43c676f16d24" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
