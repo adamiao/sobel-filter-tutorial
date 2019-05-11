@@ -4,9 +4,12 @@ https://en.wikipedia.org/wiki/Sobel_operator
 
 The same concepts explained in this code can be used for other types of filters.
 
-For grayscale transformation of images there are a ton of references on the web. A straightforward one would be to go
-to our old friend Wikipedia:
-https://en.wikipedia.org/wiki/Grayscale
+I'll not go into much detail in how to transform a colored image (an array of dimension N x M x 3 where N (height) and M
+(width) defines the frame of the image while the 3 dimensions gives us the colors (RedGreenBlue)) but the formulas to do
+such transformation can be found easily in Google.
+
+There are lots of information about colored to grayscale image transformation out there on the web. I use one that takes
+the RGB values of the image and weighs them based on predefined parameters (https://en.wikipedia.org/wiki/Grayscale).
 """
 
 from matplotlib.image import imread
