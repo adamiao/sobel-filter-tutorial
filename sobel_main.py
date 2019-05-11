@@ -4,12 +4,14 @@ https://en.wikipedia.org/wiki/Sobel_operator
 
 The same concepts explained in this code can be used for other types of filters.
 
-I'll not go into much detail in how to transform a colored image (an array of dimension N x M x 3 where N (height) and M
-(width) defines the frame of the image while the 3 dimensions gives us the colors (RedGreenBlue)) but the formulas to do
-such transformation can be found easily in Google.
+A color image is an array of dimension N x M x 3 where N is the height (number of rows), M is the width (number of
+columns) and 3 is related to the colors red, green, blue composing the image.
 
-There are lots of information about colored to grayscale image transformation out there on the web. I use one that takes
-the RGB values of the image and weighs them based on predefined parameters (https://en.wikipedia.org/wiki/Grayscale).
+A grayscale image is an array of dimension N x M.
+
+There are lots of good information about color to grayscale image transformations out there on the web. I use one that
+takes the RGB values of the image and weighs them based on pre-defined parameters
+(https://en.wikipedia.org/wiki/Grayscale).
 """
 
 from matplotlib.image import imread
