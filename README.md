@@ -1,2 +1,2 @@
-The purpose of this repository is to create a tutorial for the application of a Sobel filter.
-This repository is currently under construction.
+This is a tutorial about applying Sobel filters to images for edge detection.
+It is currently under construction!
