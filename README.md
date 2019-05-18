@@ -12,11 +12,11 @@ So, for example, if we are given the following patch of grayscale image:
 
 Then the output from the operations is:
 
-<img src="https://latex.codecogs.com/gif.latex?G_x(A)=1\cdot 119+0\cdot 80-1\cdot 122+2\cdot 177+0\cdot 154-2\cdot 212+1\cdot 89+0\cdot 25-1\cdot 12" />
+<img src="https://latex.codecogs.com/gif.latex?G_x(A)=1\cdot&space;119+0\cdot&space;80-1\cdot&space;122+2\cdot&space;177+0\cdot&space;154-2\cdot&space;212+1\cdot&space;89+0\cdot&space;25-1\cdot&space;12" />
 
 and
 
-<img src="https://latex.codecogs.com/gif.latex?G_x(A)=1\cdot 119+2\cdot 80+1\cdot 122+0\cdot 177+0\cdot 154+0\cdot 212-1\cdot 89-2\cdot 25-1\cdot 12" />
+<img src="https://latex.codecogs.com/gif.latex?G_x(A)=1\cdot&space;119+2\cdot&space;80+1\cdot&space;122+0\cdot&space;177+0\cdot&space;154+0\cdot&space;212-1\cdot&space;89-2\cdot&space;25-1\cdot&space;12" />
 
 To apply the Sobel operation to that patch of image we want to calculate:
 
