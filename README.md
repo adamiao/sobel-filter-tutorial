@@ -5,7 +5,7 @@ In this tutorial we will construct and apply Sobel filters with the intent of ex
 
 Say we are given a 3 by 3 patch of image, denoted by <img src="https://latex.codecogs.com/gif.latex?$$A$$" />, from the original image. Then the output pixel from the operation will be given by:
 
-<img src="https://latex.codecogs.com/gif.latex?\sqrt{\Big[G_x(A)\Big]^2+\Big[G_y(A)\Big]^2" />
+<img src="https://latex.codecogs.com/gif.latex?\sqrt{\big[G_x(A)\big]^2+\big[G_y(A)\big]^2" />
 
 
 Still under construction...
