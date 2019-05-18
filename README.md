@@ -16,13 +16,13 @@ which is really the matrix:
 
 Then the output from the operations is:
 
-<img src="https://latex.codecogs.com/gif.latex?G_x(A)=1\cdot&space;119+0\cdot&space;80-1\cdot&space;122+2\cdot&space;177+0\cdot&space;154-2\cdot&space;212+1\cdot&space;89+0\cdot&space;25-1\cdot&space;12" />
+<img src="https://latex.codecogs.com/gif.latex?G_x(A)=1\cdot&space;119+0\cdot&space;80-1\cdot&space;122+2\cdot&space;177+0\cdot&space;154-2\cdot&space;212+1\cdot&space;89+0\cdot&space;25-1\cdot&space;152" />
 <img src="https://latex.codecogs.com/gif.latex?\therefore\quad&space;G_x(A)=-136" />
 
 
 and
 
-<img src="https://latex.codecogs.com/gif.latex?G_x(A)=1\cdot&space;119+2\cdot&space;80+1\cdot&space;122+0\cdot&space;177+0\cdot&space;154+0\cdot&space;212-1\cdot&space;89-2\cdot&space;25-1\cdot&space;12" />
+<img src="https://latex.codecogs.com/gif.latex?G_x(A)=1\cdot&space;119+2\cdot&space;80+1\cdot&space;122+0\cdot&space;177+0\cdot&space;154+0\cdot&space;212-1\cdot&space;89-2\cdot&space;25-1\cdot&space;152" />
 <img src="https://latex.codecogs.com/gif.latex?\therefore\quad&space;G_y(A)=110" />
 
 To apply the Sobel operation to that patch of image we want to calculate:
@@ -31,5 +31,6 @@ To apply the Sobel operation to that patch of image we want to calculate:
 
 For now it's ok to have values which are out of the [0,255] range because at the very end we will normalized the image values.
 
+We do this operation for the entire input image and create a new image based on these outputs just describe above.
 
-Still under construction...
+This completes the application of thi edge detection technique.
