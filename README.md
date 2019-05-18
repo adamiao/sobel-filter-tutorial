@@ -33,4 +33,4 @@ This number will be the pixel contained in the output image. For now it's ok to 
 
 We do this operation for the entire input image and create a new image based on these outputs just describe above.
 
-This completes the application of thi edge detection technique.
+This completes the application of the edge detection technique.
