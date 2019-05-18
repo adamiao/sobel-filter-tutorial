@@ -3,8 +3,7 @@ In this tutorial we will construct and apply Sobel filters with the intent of ex
 
 <img src="https://latex.codecogs.com/gif.latex?G_x=\begin{bmatrix}&space;1&space;&&space;0&space;&&space;-1&space;\\&space;2&space;&&space;0&space;&&space;-2&space;\\&space;1&space;&&space;0&space;&&space;-1&space;\end{bmatrix}\quad\text{and}\quad&space;G_y=\begin{bmatrix}&space;1&space;&&space;2&space;&&space;1&space;\\&space;0&space;&&space;0&space;&&space;0&space;\\&space;-1&space;&&space;-2&space;&&space;-1&space;\end{bmatrix}" title="G_x=\begin{bmatrix} 1 & 0 & -1 \\ 2 & 0 & -2 \\ 1 & 0 & -1 \end{bmatrix}\quad\text{and}\quad G_y=\begin{bmatrix} 1 & 2 & 1 \\ 0 & 0 & 0 \\ -1 & -2 & -1 \end{bmatrix}" />
 
-Once going through a piece of image which is 3 by 3 (let's call it "A"), then the output pixel value will be equal to:
-
+Say we are given a 3 by 3 patch of image, denoted by <img src="https://latex.codecogs.com/gif.latex?$$A$$" />, from the original image. Then the output pixel from the operation will be given by:
 
 <img src="https://latex.codecogs.com/gif.latex?\sqrt{G_x\big(A\big)^2+G_y\big(A\big)^2" />
 
