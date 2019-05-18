@@ -13,10 +13,13 @@ So, for example, if we are given the following patch of grayscale image:
 Then the output from the operations is:
 
 <img src="https://latex.codecogs.com/gif.latex?G_x(A)=1\cdot&space;119+0\cdot&space;80-1\cdot&space;122+2\cdot&space;177+0\cdot&space;154-2\cdot&space;212+1\cdot&space;89+0\cdot&space;25-1\cdot&space;12=-136" />
+<img src="https://latex.codecogs.com/gif.latex?G_x(A)=-136" />
+
 
 and
 
 <img src="https://latex.codecogs.com/gif.latex?G_x(A)=1\cdot&space;119+2\cdot&space;80+1\cdot&space;122+0\cdot&space;177+0\cdot&space;154+0\cdot&space;212-1\cdot&space;89-2\cdot&space;25-1\cdot&space;12=110" />
+<img src="https://latex.codecogs.com/gif.latex?G_y(A)=110" />
 
 To apply the Sobel operation to that patch of image we want to calculate:
 
@@ -24,6 +27,6 @@ To apply the Sobel operation to that patch of image we want to calculate:
 
 For now it's ok to have values which are out of the [0,255] range because at the very end we will normalized the image values.
 
-![alt-text](Images/grayscale_patch.png "Example of a grayscale patch")
+![alt-text](Images/grayscale_patch.PNG "Example of a grayscale patch")
 
 Still under construction...
