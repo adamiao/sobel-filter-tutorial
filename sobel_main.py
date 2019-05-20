@@ -7,7 +7,7 @@ The same concepts explained in this code can be used for other types of filters.
 A color image is an array of dimension N x M x 3 where N is the height (number of rows), M is the width (number of
 columns) and 3 is related to the colors red, green, blue composing the image.
 
-A grayscale image is an array of dimension N x M. Each value (pixel) of this array belongs to the interval [0, 255].
+A grayscale image is an array of dimension N x M.
 
 There are lots of good information about color to grayscale image transformations out there on the web. I use one that
 takes the RGB values of the image and weighs them based on pre-defined parameters
