@@ -7,7 +7,7 @@ The same concepts explained in this code can be used for other types of filters.
 A color image is an array of dimension N x M x 3 where N is the height (number of rows), M is the width (number of
 columns) and 3 is related to the colors red, green, blue composing the image.
 
-A grayscale image is an array of dimension N x M.
+A grayscale image is an array of dimension N x M. Each value (pixel) of this array belongs to the interval [0, 255].
 
 There are lots of good information about color to grayscale image transformations out there on the web. I use one that
 takes the RGB values of the image and weighs them based on pre-defined parameters
@@ -28,8 +28,7 @@ input_image = imread(photo_file)
 [nx, ny, nz] = np.shape(input_image)  # nx: height, ny: width, nz: colors (RGB)
 
 # Extracting each one of the RGB components
-# r_img, g_img, b_img = input_image[:, :, 0], input_image[:, :, 1], input_image[:, :, 2]
-r_img, g_img, b_img = input_image[:, :, 0] / 255, input_image[:, :, 1] / 255, input_image[:, :, 2] / 255
+r_img, g_img, b_img = input_image[:, :, 0], input_image[:, :, 1], input_image[:, :, 2]
 
 # To make it grayscale we can use the following constants to weight
 # r_const, g_const, b_const = 0.2989, 0.5870, 0.1140
@@ -37,20 +36,20 @@ r_const, g_const, b_const = 0.2126, 0.7152, 0.0722
 
 # A weighted average of each color component will give us the grayscale image
 # grayscale = r_const*r_img + g_const*g_img + b_const*b_img
-gamma = 1.0
-grayscale = (r_const*r_img**gamma + g_const*g_img**gamma + b_const*b_img**gamma)*255
+gamma = 0.747
+grayscale = (r_const*r_img**gamma + g_const*g_img**gamma + b_const*b_img**gamma)
 
 # This command will display the image on the screen
-# plt.imshow(grayscale, cmap=plt.get_cmap('gray'))
-# plt.show()
+plt.imshow(grayscale, cmap=plt.get_cmap('gray'))
+plt.show()
 
 # #------------------------------------------------------------------------------
-# PART II - Applying the kernel Gx and Gy to image
+# PART II - Applying the kernel Gx and Gy to an image
 # #------------------------------------------------------------------------------
 
 """
-The kernels Gx and Gy can be thought of as a differential operation in the input_image of the input image 
-in the directions x and y respectively. These kernels are given by:
+The kernels Gx and Gy can be thought of as a differential operation in the "input_image" array in the directions x and y 
+respectively. These kernels are given by:
       _               _                   _                _
      |                 |                 |                  |
      | 1.0   0.0  -1.0 |                 |  1.0   2.0   1.0 |
@@ -72,8 +71,8 @@ for i in range(rows - 2):
 
 
 # Change the data type for the images we want to display
-sobel_filtered_image = sobel_filtered_image.astype('int32')
-input_image = input_image.astype('int32')
+# sobel_filtered_image = sobel_filtered_image.astype('int32')
+# input_image = input_image.astype('int32')
 
 # Display the images
 
@@ -82,9 +81,9 @@ fig = plt.figure()
 ax1 = fig.add_subplot(121)  # left side
 ax2 = fig.add_subplot(122)  # right side
 
-ax1.imshow(input_image)
-ax2.imshow(sobel_filtered_image, cmap=plt.get_cmap('gray'))
+ax1.imshow(input_image, cmap=plt.get_cmap('gray'), interpolation='none')
+ax2.imshow(sobel_filtered_image, cmap=plt.get_cmap('gray'), interpolation='nearest')
 plt.show()
 
 # Save the filtered image in destination path
-plt.imsave('test_sobel_filtered_image.png', sobel_filtered_image, cmap=plt.get_cmap('gray'))
+# plt.imsave('test_sobel_filtered_image.png', sobel_filtered_image, cmap=plt.get_cmap('gray'))
