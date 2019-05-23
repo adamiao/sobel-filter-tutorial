@@ -12,14 +12,18 @@ from matplotlib.image import imread
 from scipy import ndimage
 import matplotlib.pyplot as plt
 
-fig = plt.figure()
-ax1, ax2 = fig.add_subplot(121), fig.add_subplot(122)  # left and right image respectively
 
+# Here we read the image and bring it as an array
 original_image = imread('Images/original_image.PNG')
-dx, dy = ndimage.sobel(original_image, 0), ndimage.sobel(original_image, 1)  # apply Sobel in the x and y directions
+
+# Next we apply the Sobel filter in the x and y directions to then calculate the output image
+dx, dy = ndimage.sobel(original_image, axis=0), ndimage.sobel(original_image, axis=1)
 sobel_filtered_image = np.hypot(dx, dy)  # is equal to ( dx ^ 2 + dy ^ 2 ) ^ 0.5
 sobel_filtered_image = sobel_filtered_image / np.max(sobel_filtered_image)  # normalization step
 
+# Display and compare input and output images
+fig = plt.figure()
+ax1, ax2 = fig.add_subplot(121), fig.add_subplot(122)
 ax1.imshow(original_image)
-ax2.imshow(sobel_filtered_image)
+ax2.imshow(sobel_filtered_image, cmap=plt.get_cmap('gray'))
 plt.show()
