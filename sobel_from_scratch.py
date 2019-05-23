@@ -59,7 +59,7 @@ Gx = | 2.0   0.0  -2.0 |    and     Gy = |  0.0   0.0   0.0 |
      |_               _|                 |_                _|
 """
 
-# This chunk of code defines the kernel operations
+# Here we define the matrices associated with the Sobel filter
 Gx = np.array([[1.0, 0.0, -1.0], [2.0, 0.0, -2.0], [1.0, 0.0, -1.0]])
 Gy = np.array([[1.0, 2.0, 1.0], [0.0, 0.0, 0.0], [-1.0, -2.0, -1.0]])
 [rows, columns] = np.shape(grayscale_image)

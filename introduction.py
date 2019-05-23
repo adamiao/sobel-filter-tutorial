@@ -10,7 +10,7 @@ import matplotlib.pyplot as plt
 A = np.array([[119, 80, 122], [177, 154, 212], [89, 25, 152]])
 plt.imshow(A, cmap=plt.get_cmap('gray'))
 
-# This chunk of code defines the kernel operations for the Sobel filter
+# Next we define the matrices associated with the Sobel filter
 Gx = np.array([[1.0, 0.0, -1.0], [2.0, 0.0, -2.0], [1.0, 0.0, -1.0]])
 Gy = np.array([[1.0, 2.0, 1.0], [0.0, 0.0, 0.0], [-1.0, -2.0, -1.0]])
 
