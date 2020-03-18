@@ -29,7 +29,7 @@ To apply the Sobel operation to that patch of image we want to calculate:
 
 <img src="https://latex.codecogs.com/gif.latex?\sqrt{\big[G_x(A)\big]^2+\big[G_y(A)\big]^2}\quad\text{which&space;in&space;the&space;case&space;of&space;this&space;example&space;is&space;equal&space;to&space;}\,174.917" />
 
-This number will be the pixel contained in the output image. For now it's ok to have values which are out of the [0,255] range because at the very end we will normalized the image values. Notice that the output will be always greater than or equal to zero.
+This number will be the pixel contained in the output image. For now it's ok to have values which are out of the [0,255] range because at the very end we will normalize the image values. Notice that the output will be always greater than or equal to zero.
 
 We do this operation for the entire input image and create a new image based on these outputs just describe above.
 
